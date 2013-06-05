@@ -1,14 +1,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!--
-	WWW SQL Designer, (C) 2005-2011 Ondrej Zara, ondras@zarovi.cz
-	Version: 2.6
+	WWW SQL Designer, (C) 2005-2012 Ondrej Zara, ondras@zarovi.cz
+	Version: 2.7
 	See license.txt for licencing information.
 -->
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<title>WWW SQL Designer</title>
 	<meta name="viewport" content="initial-scale=1,maximum-scale=1" />
- 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link rel="stylesheet" type="text/css" href="styles/style.css" media="all" />     
 	<!--[if IE 6]><link rel="stylesheet" type="text/css" href="styles/ie6.css" /><![endif]-->
 	<!--[if IE 7]><link rel="stylesheet" type="text/css" href="styles/ie7.css" /><![endif]-->
@@ -73,7 +73,7 @@
 						* <label id="language" for="optionlocale"></label>
 					</td>
 					<td>
-						<select id="optionlocale"></select>
+						<select id="optionlocale"><option></option></select>
 					</td>
 				</tr>
 				<tr>
@@ -81,7 +81,7 @@
 						* <label id="db" for="optiondb"></label> 
 					</td>
 					<td>
-						<select id="optiondb"></select>
+						<select id="optiondb"><option></option></select>
 					</td>
 				</tr>
 				<tr>
@@ -151,6 +151,8 @@
 							<legend id="client"></legend>
 							<input type="button" id="clientsave" /> 
 							<input type="button" id="clientload" />
+							<input type="button" id="clientlocalsave" />
+							<input type="button" id="clientlocalload" />
 							<hr/>
 							<input type="button" id="clientsql" />
 						</fieldset>
@@ -158,7 +160,7 @@
 					<td>
 						<fieldset>
 							<legend id="server"></legend>
-							<label for="backend" id="backendlabel"></label> <select id="backend"></select>
+							<label for="backend" id="backendlabel"></label> <select id="backend"><option></option></select>
 							<hr/>
 							<input type="button" id="serversave" /> 
 							<input type="button" id="quicksave" /> 
@@ -172,7 +174,7 @@
 					<td colspan="2">
 						<fieldset>
 							<legend id="output"></legend>
-							<textarea id="textarea"></textarea>
+							<textarea id="textarea" rows="1" cols="1"></textarea><!--modified by javascript later-->
 						</fieldset>
 					</td>
 				</tr>
@@ -183,7 +185,7 @@
 	<div id="keys">
 		<fieldset>
 			<legend id="keyslistlabel"></legend> 
-			<select id="keyslist"></select>
+			<select id="keyslist"><option></option></select>
 			<input type="button" id="keyadd" />
 			<input type="button" id="keyremove" />
 		</fieldset>
@@ -194,7 +196,7 @@
 					<tr>
 						<td>
 							<label for="keytype" id="keytypelabel"></label>
-							<select id="keytype"></select>
+							<select id="keytype"><option></option></select>
 						</td>
 						<td></td>
 						<td>
@@ -208,7 +210,7 @@
 					<tr>
 						<td>
 							<label for="keyfields" id="keyfieldslabel"></label><br/>
-							<select id="keyfields" size="5" multiple="multiple"></select>
+							<select id="keyfields" size="5" multiple="multiple"><option></option></select>
 						</td>
 						<td>
 							<input type="button" id="keyleft" value="&lt;&lt;" /><br/>
@@ -216,7 +218,7 @@
 						</td>
 						<td>
 							<label for="keyavail" id="keyavaillabel"></label><br/>
-							<select id="keyavail" size="5" multiple="multiple"></select>
+							<select id="keyavail" size="5" multiple="multiple"><option></option></select>
 						</td>
 					</tr>
 				</tbody>
