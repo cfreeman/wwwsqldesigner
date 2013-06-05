@@ -9,6 +9,26 @@ v\:* {
 	top: expression(eval(document.documentElement.scrollTop)); 
 }
 
+#bar .shadow-corner {
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/bar_corner.png',sizingMethod='crop');
+	overflow: hidden;
+}
+
+#bar .shadow-left {
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/bar_left.png',sizingMethod='crop');
+	height: expression(eval(this.parentNode.offsetHeight));
+	overflow: hidden;
+}
+
+#bar .shadow-bottom {
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/bar_bottom.png',sizingMethod='crop');
+	width: expression(eval(this.parentNode.offsetWidth));
+	overflow: hidden;
+}
+
 .table .shadow-corner {
 	background-image: none;
 }

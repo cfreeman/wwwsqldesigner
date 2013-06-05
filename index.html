@@ -1,13 +1,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!--
-	WWW SQL Designer, (C) 2005-2010 Ondrej Zara, ondras@zarovi.cz
-	Version: 2.5
+	WWW SQL Designer, (C) 2005-2011 Ondrej Zara, ondras@zarovi.cz
+	Version: 2.6
 	See license.txt for licencing information.
 -->
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<title>WWW SQL Designer</title>
-	<meta http-equiv="X-UA-Compatible" content="IE=7" />
+	<meta name="viewport" content="initial-scale=1,maximum-scale=1" />
  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link rel="stylesheet" type="text/css" href="styles/style.css" media="all" />     
 	<!--[if IE 6]><link rel="stylesheet" type="text/css" href="styles/ie6.css" /><![endif]-->
@@ -118,6 +118,22 @@
 						<input type="checkbox" id="optionvector" />
 					</td>
 				</tr>
+				<tr>
+					<td>
+						* <label id="showsize" for="optionshowsize"></label> 
+					</td>
+					<td>
+						<input type="checkbox" id="optionshowsize" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						* <label id="showtype" for="optionshowtype"></label> 
+					</td>
+					<td>
+						<input type="checkbox" id="optionshowtype" />
+					</td>
+				</tr>
 			</tbody>
 		</table>
 
@@ -145,6 +161,7 @@
 							<label for="backend" id="backendlabel"></label> <select id="backend"></select>
 							<hr/>
 							<input type="button" id="serversave" /> 
+							<input type="button" id="quicksave" /> 
 							<input type="button" id="serverload" /> 
 							<input type="button" id="serverlist" /> 
 							<input type="button" id="serverimport" /> 
